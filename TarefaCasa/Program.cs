@@ -27,6 +27,7 @@ do
         var calculadoraIMC = new CalculadoraIMC();
       
         Console.WriteLine($"Seu IMC é: {calculadoraIMC.Calcular(peso, altura)}");
+       
         Console.WriteLine(calculadoraIMC.ObterStatus(calculadoraIMC.Calcular(peso,altura)));
 
         prossiga = false;

@@ -9,8 +9,8 @@ namespace TesteConceitosBasicos
         public void CalcularTeste()
         {
             //cenario
-            float peso = 70f;
-            float altura = 1.7f;
+            float peso = 100f;
+            float altura = 2f;
             CalculadoraIMC calculadora = new CalculadoraIMC();
 
             //ação
@@ -18,6 +18,23 @@ namespace TesteConceitosBasicos
             float imc = calculadora.Calcular(peso, altura);
 
             //verificação
+
+            Assert.AreEqual(25, imc);
+
+        }
+
+        [TestMethod]
+
+        public void ObterStatusTeste()
+        {
+            //Cenario
+            float imc = 25;
+            CalculadoraIMC calculadora = new CalculadoraIMC();
+            //ação
+            string status = calculadora.ObterStatus(imc);
+            //verificação
+
+            Assert.AreEqual(status,"Sobrepeso");
         }
     }
 }

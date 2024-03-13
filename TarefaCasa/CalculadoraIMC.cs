@@ -10,8 +10,10 @@ namespace TarefaCasa
     {
         public float Calcular(float peso, float altura)
         {
-            float imc = peso / (altura * altura);
+             float imc = peso / (altura * altura);
             return imc;
+
+
 
         }
         public string ObterStatus(float imc)
@@ -34,7 +36,7 @@ namespace TarefaCasa
             else
                 status = "Obesidade III";
 
-            return $"O status é {status}";
+            return status;
         }
 
     }
